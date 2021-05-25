@@ -14,7 +14,7 @@ from Baralho import Carta
     ("pula", "pula", "+4", "+4",  "pula" , "5", "5", "escolhacor", "+2","+2", "reverso", "pula"),    
     #(True,2,True,True)
   ])
-class TestUNOSelecionarCarta(unittest.TestCase):
+class TestUNO0(unittest.TestCase):
   def testSelecionarCarta(self):
 
     #Prepara as mãos dos jogadores. Esses irão descartar a primeira carta disponível percorrendo o caminho definido pelo teste
@@ -52,57 +52,12 @@ class TestUNOSelecionarCarta(unittest.TestCase):
     #gerenciador.jogadores[gerenciador.atual_jogador].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta1))
     #print(gerenciador.jogadores[gerenciador.atual_jogador].cartas)
     gerenciador.gerenciarJogo()
-    del gerenciador
+    
 
 
 
 
-    ##OUTRO MODO DE TESTE##
-
-    def TesteGerenciador1(self):
-        #Prepara as mãos dos jogadores. Esses irão descartar a primeira carta disponível percorrendo o caminho definido pelo teste
-    #Teste do início
-        gerenciador = Gerenciador()
-        gerenciador.inicializarJogo()
-        gerenciador.jogadores[0].cartas.clear()
-        gerenciador.jogadores[1].cartas.clear()
-        if gerenciador.calcularProxJogador==1:
-            atual=1
-            prox=0
-        else:
-            atual=0
-            prox=1
-
-        #Teste das cartas
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta1))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta2))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta3))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta4))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta5))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta6))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-
-        gerenciador.jogadores[atual].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta7))
-        gerenciador.acaoJogada(atual,gerenciador.jogadores[atual].cartas[0])
-
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta8))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-
-        gerenciador.jogadores[atual].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta9))
-        gerenciador.acaoJogada(atual,gerenciador.jogadores[atual].cartas[0])
-        gerenciador.jogadores[atual].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta10))
-        gerenciador.acaoJogada(atual,gerenciador.jogadores[atual].cartas[0])
-        gerenciador.jogadores[atual].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta11))
-        gerenciador.acaoJogada(atual,gerenciador.jogadores[atual].cartas[0])
-
-        gerenciador.jogadores[prox].cartas.append(Carta(gerenciador.pilha_mesa[0].cor,self.carta12))
-        gerenciador.acaoJogada(prox,gerenciador.jogadores[prox].cartas[0])
-        gerenciador.verificarVencedor(gerenciador.jogadores[prox])
+   
 
 
 
