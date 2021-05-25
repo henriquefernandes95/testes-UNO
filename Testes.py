@@ -11,7 +11,7 @@ from Baralho import Carta
 
 @parameterized_class(('carta1','carta2','carta3','carta4','carta5','carta6','carta7','carta8','carta9','carta10','carta11','carta12'),#ATC1 - [Inicio, Espera Jogada, Skip, Espera Jogada, Skip, Espera Jogada, +4, Espera Jogada, +4, Espera Jogada, Skip, Espera Jogada, Número, Espera Jogada, Número, Espera Jogada, Wild, Espera Jogada, +2, Espera Jogada,+2, Espera Jogada, Reverse, Espera Jogada, Skip, Fim]
   [
-    ("pula", "pula", "+4", "+4",  "pula" , "5", "5", "escolhacor", "+2","+2", "reverso", "pula"),    
+    ("pula", "pula", "+4", "+4",  "pula" , "5", "5", "escolhacor", "+2","+2", "reverso", "pula"),     
     #(True,2,True,True)
   ])
 class TestUNO0(unittest.TestCase):
